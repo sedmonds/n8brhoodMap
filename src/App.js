@@ -11,6 +11,7 @@ class App extends Component {
       center: {lat: 19.547621, lng: -155.0136},
       zoom: 11
     });
+    window.mapObject = map;
   }
   // loads a script into index.html
   loadScript() {
