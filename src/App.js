@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import "./App.css";
+import Header from "./components/Header";
+import Content from "./components/Content";
 
 class App extends Component {
   initMap() {
@@ -30,7 +32,12 @@ class App extends Component {
   }
   render() {
     this.loadScript();
-    return <div className="App" id="map" />;
+    return (
+      <div className="App">
+        <Header />
+        <Content />
+      </div>
+    );
   }
 }
 

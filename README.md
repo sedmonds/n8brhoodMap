@@ -15,7 +15,9 @@ Tasks:
 
 
 
-
+Good Tips:
+Extending React.Component vs Component: https://stackoverflow.com/questions/45031226/extending-react-component-vs-component
+Import statements: https://developer.mozilla.org/pt-PT/docs/Web/JavaScript/Reference/Statements/import
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
