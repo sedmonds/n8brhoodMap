@@ -3,9 +3,12 @@
 
 
 
-Tasks:
-
-[]: gets map on screen
+## Tasks:
+- [x] creates react app
+- [x] gets map on screen (feel good exercise: something works!)
+- [x] makes basic folder structure
+- [x] organize page layout
+- [ ] sets up api data
 
 
 

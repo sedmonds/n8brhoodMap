@@ -32,7 +32,27 @@
   }
 }
 
+/* Header */
 
+
+
+/* Content */
 #map {
   height: -webkit-fill-available;
+  /*min-height: 100vh;*/
 }
+
+#content {
+
+}
+
+#list {
+  width: 25%;
+  height: 100%;
+  background-color: #eee;
+  z-index: 1;
+  position: absolute;
+}
+
+
+/* Footer */

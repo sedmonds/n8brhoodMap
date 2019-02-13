@@ -2,10 +2,11 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./components/Header";
 import Content from "./components/Content";
+import Footer from "./components/Footer";
 
 class App extends Component {
   initMap() {
-    // The map, centered at Puna
+    // The map, centered at SkyFarm
     let map = new window.google.maps.Map(document.getElementById("map"), {
       center: {lat: 19.547621, lng: -155.0136},
       zoom: 11
@@ -13,12 +14,12 @@ class App extends Component {
   }
   // loads a script into index.html
   loadScript() {
-    let scriptElement = this.makeMapScript();
-    let allScripts = document.getElementsByTagName("script");
-    let script = allScripts[0];
-    console.log(allScripts);
-    script.parentNode.insertBefore(scriptElement, allScripts[0]);
-
+    let script = document.getElementsByTagName("script")[0];
+    const scriptFromMap = this.makeMapScript();
+    script.parentNode.insertBefore(scriptFromMap, script[0]);
+    scriptFromMap.onerror = () => {
+      alert("Error loading map data" + this.src);
+    }
     window.initMap = this.initMap;
   }
   // makes script for getting google map element
@@ -36,6 +37,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Content />
+        <Footer />
       </div>
     );
   }
