@@ -4,15 +4,20 @@ import List from "./List";
 import * as VenuesAPI from "../api/Venues";
 
 class Content extends React.Component {
+  state = {
+    venues: []
+  };
+
   componentDidMount() {
-    // VenuesAPI.getVenues().then(res => console.log(res));
+    VenuesAPI.getVenues().then(response =>
+      this.setState({ venues: response })
+    );
   }
 
   render() {
-    console.log("RESPONSE");
     return (
       <div className="content">
-        <List />
+        <List venues={this.state.venues} />
         <Map />
       </div>
     );

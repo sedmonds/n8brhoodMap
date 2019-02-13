@@ -9,6 +9,7 @@
 - [x] makes basic folder structure
 - [x] organize page layout
 - [ ] sets up api data
+- [ ] adds a basic error handling
 
 
 
