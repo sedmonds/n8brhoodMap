@@ -9,19 +9,14 @@ class Content extends React.Component {
   };
 
   componentDidMount() {
-    // getVenues().then(response =>
-    //   this.setState({ venues: response })
-    // );
-
-    // this.setState()
-    getVenues().then(res => console.log(res));
+    getVenues().then(res => this.setState({ venues: res }));
   }
 
   render() {
     return (
       <div className="content">
         <List venues={this.state.venues} />
-        <Map />
+        <Map venues={this.state.venues}/>
       </div>
     );
   }
