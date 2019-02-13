@@ -1,7 +1,7 @@
 import React from "react";
 import Map from "./Map";
 import List from "./List";
-import * as VenuesAPI from "../api/Venues";
+import { getVenues } from "../api/Venues";
 
 class Content extends React.Component {
   state = {
@@ -9,9 +9,12 @@ class Content extends React.Component {
   };
 
   componentDidMount() {
-    VenuesAPI.getVenues().then(response =>
-      this.setState({ venues: response })
-    );
+    // getVenues().then(response =>
+    //   this.setState({ venues: response })
+    // );
+
+    // this.setState()
+    getVenues().then(res => console.log(res));
   }
 
   render() {
