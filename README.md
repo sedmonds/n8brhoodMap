@@ -1,3 +1,22 @@
+# React Project: Points of Interest on Local Map
+
+
+
+
+Tasks:
+
+[]: gets map on screen
+
+
+
+## Good Places to Start: Listings for pages that will help you on your journey
+
+1. https://developers.google.com/maps/documentation/javascript/adding-a-google-map#introduction
+
+
+
+
+
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
 ## Available Scripts
