@@ -31,6 +31,7 @@ class Map extends React.Component {
         this.markers.push(marker);
       }
       window.markers = this.markers;
+      window.infowindow = infowindow; // GO GLOBAL!!!
     }
   };
 

@@ -14,13 +14,17 @@ class Content extends React.Component {
     VenuesAPI.getVenues().then(response => this.setState({ venues: response }));
   }
 
+
   clickMarker(venueID) {
     for (let i = 0; i < window.markers.length; i++) {
       
       if (venueID.venue.id === window.markers[i].title) {
-        // window.infowindow.open(window.googleMapObject, window.markers[i]);
+        const hello = 'fuck yeah!';
+        
         console.log('id/title', window.markers[i].title, venueID.venue.id);
-        console.log(window.googleMapObject.mapDataProviders);
+        console.log(window.googleMapObject.mapDataProviders); 
+        window.infowindow.setContent(`${hello}`)
+        window.infowindow.open(window.googleMapObject, window.markers[i]);
       }
 
     }
