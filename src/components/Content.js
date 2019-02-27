@@ -12,11 +12,33 @@ class Content extends React.Component {
     getVenues().then(res => this.setState({ venues: res }));
   }
 
+  handleClick = (ven) => {
+    for (let i=0; i < window.markers.length; i++) {
+      if (ven.venue.id === window.markers[i].title) {
+        // console.log(ven.venue.id, window.markers[i].title, window.markers[i],window.mapObject);
+        //let content = this.makeContent(ven);
+
+        window.infowindow.open(window.googleMapObject, window.markers[i]);
+
+
+      }
+    }
+  }
+
+  makeContent = (venue) => {
+    return `<div>
+      <p className="title"><a href="#">Name: ${venue.venue.name}</a></p>
+      <p>Address: ${venue.venue.location.address}</p>
+    </div>`;
+  };
   render() {
     return (
       <div className="content">
-        <List venues={this.state.venues} />
-        <Map venues={this.state.venues}/>
+        <List
+          venues={this.state.venues}
+          showContent={this.handleClick}
+        />
+        <Map venues={this.state.venues} makeContent={this.makeContent}/>
       </div>
     );
   }

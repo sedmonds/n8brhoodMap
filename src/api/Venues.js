@@ -7,7 +7,7 @@ const SECRET = "SDEEK4HQN34GE24JP2TELDEJWX3CRI3V1X0YLO4CV15FF4CJ";
 // Health Food Store 50aa9e744b90af0d42d5de0e
 // zipcode 96749
 
-export const getVenues = () => {
+export let getVenues = () => {
   return fetch(`https://api.foursquare.com/v2/venues/explore?categoryId=4bf58dd8d48988d118951735&near=96749&client_id=${CLIENT}&client_secret=${SECRET}&v=20190212
 `)
     .then(response => response.json())
