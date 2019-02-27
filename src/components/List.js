@@ -8,17 +8,23 @@ class List extends React.Component {
 
     return (
       <div id="list">
-        <h2>Venues</h2>
+        <h2>Local Grocers</h2>
         <p>{this.props.textString}</p>
-        <input type="text" value={this.props.textString} onChange={e => this.props.changeMarker(e.target.value)} />
+        <label htmlFor="namedInput">Filter By Name:</label>
+        <input id="namedInput" type="text" name="name" value={this.props.textString} onChange={e => this.props.changeMarker(e.target.value)} />
         <ol>
           {venues.map(ven => (       
             <li key={ven.venue.id}>
               <div>
       
                 <p>Name: 
-                  <a href="#" onClick={() => this.props.showInfo(ven)}>
-                    {ven.venue.name}
+                  <a 
+                    href="#" 
+                    type="text"
+                    aria-label={ven.venue.name}
+                    aria-required="true" 
+                    onClick={() => this.props.showInfo(ven)}>
+                      {ven.venue.name}
                   </a>
                 </p>
                 <p>Address: {ven.venue.location.address}</p>
