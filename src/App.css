@@ -47,13 +47,37 @@
 }
 
 #list {
-  width: 25%;
+  width: 45%;
   height: 100%;
   background-color: #eee;
   z-index: 1;
   position: absolute;
   overflow-y: scroll;
+  list-style-position: outside;
 }
 
 
 /* Footer */
+
+
+/* Media */
+@media only screen and (max-width: 420px) {
+  body {
+    background-color: lightblue;
+  }
+  h1, h2 {
+    font-size: 0.9em;
+  }
+  #list {
+    font-size: 0.7em;
+    padding-right: 1em;
+    border-right: 1px solid slategrey;
+
+  }
+
+  ol li {
+    padding: 0px;
+    margin-left: 0px;
+  }
+  
+}

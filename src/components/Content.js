@@ -17,20 +17,21 @@ class Content extends React.Component {
   }
 
 
-  clickMarker(venueID) {
+  clickMarker = venueID => {
     for (let i = 0; i < window.markers.length; i++) {
       
       if (venueID.venue.id === window.markers[i].title) {
-        const hello = 'fuck yeah!';
+        let content = this.constructInfo(venueID);
 
         console.log('id/title', window.markers[i].title, venueID.venue.id);
         console.log(window.googleMapObject.mapDataProviders); 
-        window.infowindow.setContent(`${hello}`)
+        window.infowindow.setContent(content);
         window.infowindow.open(window.googleMapObject, window.markers[i]);
       }
 
     }
-  }
+  };
+  
   updateContent = (text) => {
     this.setState({ text });
     if (text) {
@@ -43,6 +44,13 @@ class Content extends React.Component {
   filterItems = (text, venues) => {
     return venues.filter(venueID => venueID.venue.name.toLowerCase().includes(text.toLowerCase()));
   }
+
+  constructInfo = item => {
+    return `<div>
+      <p>Name: <a href="#">${item.venue.name}</a></p>
+      <p>Address: ${item.venue.location.address}</p>
+    </div>`;
+  };
 
   render() {
     console.log(this.state.venues);
