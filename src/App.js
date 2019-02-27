@@ -2,7 +2,7 @@ import React, { Component } from "react";
 import "./App.css";
 import Header from "./shared/components/layout/Header";
 import Content from "./components/Content";
-import Footer from "./components/Footer";
+import Footer from "./shared/components/layout/Footer";
 
 class App extends Component {
   initMap() {
