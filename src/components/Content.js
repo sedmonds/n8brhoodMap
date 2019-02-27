@@ -5,18 +5,20 @@ import List from "./List";
 import * as VenuesAPI from "../api/Venues";
 
 class Content extends React.Component {
+  // React handles state of data. Use JSON object
   state = {
-    locations: []
+    venues: []
   };
 
   componentDidMount() {
-    VenuesAPI.getVenues().then(response => console.log(response));
+    VenuesAPI.getVenues().then(response => this.setState({ venues: response }));
   }
   render() {
+    console.log(this.state.venues);
     return (
       <div className="content">
-        <List />
-        <Map />
+        <List venues={this.state.venues} />
+        <Map venues={this.state.venues} />
       </div>
     );
   }
