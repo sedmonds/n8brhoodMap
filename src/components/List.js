@@ -11,7 +11,7 @@ class List extends React.Component {
         <input type="text" />
         <ol>
           {venues.map(ven => (
-            <li>
+            <li key={ven.venue.id}>
               <div>
                 <h2>{ven.venue.name}</h2>
               </div>
