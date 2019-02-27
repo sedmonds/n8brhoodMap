@@ -14,7 +14,8 @@ class Map extends React.Component {
           lat: venues[i].venue.location.lat,
           lng: venues[i].venue.location.lng 
           },
-          map: window.googleMapObject
+          map: window.googleMapObject,
+          title: venues[i].venue.id
         });
 
         // infowindow opens on map object and add marker
@@ -29,11 +30,12 @@ class Map extends React.Component {
     
         this.markers.push(marker);
       }
+      window.markers = this.markers;
     }
   };
 
   constructInfo(venue) {
-     
+
     // for future use instead of infowindow.setContent()
   
   }
