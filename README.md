@@ -27,6 +27,7 @@
 4. https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910
 5. https://softwareengineering.stackexchange.com/questions/158603/what-does-the-term-payload-mean-in-programming
 6. Info Windows: https://developers.google.com/maps/documentation/javascript/infowindows
+7: Add Markers: https://developers.google.com/maps/documentation/javascript/markers
 
 Vim is your thing, you will end up here. :-)
 6. https://code.visualstudio.com/docs/nodejs/reactjs-tutorial Unless 
