@@ -7,11 +7,13 @@ import * as VenuesAPI from "../api/Venues";
 class Content extends React.Component {
   // React handles state of data. Use JSON object
   state = {
-    venues: []
+    venues: [],
+    allVenues: [],
+    text: ""
   };
 
   componentDidMount() {
-    VenuesAPI.getVenues().then(response => this.setState({ venues: response }));
+    VenuesAPI.getVenues().then(response => this.setState({ venues: response, allVenues: response }));
   }
 
 
@@ -20,7 +22,7 @@ class Content extends React.Component {
       
       if (venueID.venue.id === window.markers[i].title) {
         const hello = 'fuck yeah!';
-        
+
         console.log('id/title', window.markers[i].title, venueID.venue.id);
         console.log(window.googleMapObject.mapDataProviders); 
         window.infowindow.setContent(`${hello}`)
@@ -29,12 +31,28 @@ class Content extends React.Component {
 
     }
   }
+  updateContent = (text) => {
+    this.setState({ text });
+    if (text) {
+      this.setState({venues: this.filterItems(text, this.state.venues)});
+    } else {
+      this.setState({venues: this.state.allVenues});
+    }
+  }
+
+  filterItems = (text, venues) => {
+    return venues.filter(venueID => venueID.venue.name.toLowerCase().includes(text.toLowerCase()));
+  }
 
   render() {
     console.log(this.state.venues);
     return (
       <div className="content">
-        <List venues={this.state.venues} showInfo={this.clickMarker} />
+        <List 
+          venues={this.state.venues} 
+          showInfo={this.clickMarker} 
+          textString={this.state.text} 
+          changeMarker={this.updateContent}/>
         <Map venues={this.state.venues} />
       </div>
     );

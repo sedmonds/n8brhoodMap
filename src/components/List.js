@@ -9,7 +9,8 @@ class List extends React.Component {
     return (
       <div id="list">
         <h2>Venues</h2>
-        <input type="text" />
+        <p>{this.props.textString}</p>
+        <input type="text" value={this.props.textString} onChange={e => this.props.changeMarker(e.target.value)} />
         <ol>
           {venues.map(ven => (       
             <li key={ven.venue.id}>
