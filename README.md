@@ -8,15 +8,28 @@
 - [x] gets map on screen (feel good exercise: something works!)
 - [x] makes basic folder structure
 - [x] organize page layout
-- [ ] sets up api data
-- [ ] adds a basic error handling
+- [x] sets up api data
+- [x] adds a basic error handling
+- [x] adds markers
+- [x] restructure/refactor
+- [ ]
+- [ ]
+- [ ]
+- [ ]
 
 
 
 ## Good Places to Start: Listings for pages that will help you on your journey
 
 1. https://developers.google.com/maps/documentation/javascript/adding-a-google-map#introduction
+2. https://developers.google.com/maps/documentation/javascript/markers
+3. https://developers.google.com/maps/documentation/javascript/infowindows
+4. https://medium.com/@etherealm/named-export-vs-default-export-in-es6-affb483a0910
+5. https://softwareengineering.stackexchange.com/questions/158603/what-does-the-term-payload-mean-in-programming
 
+Vim is your thing, you will end up here. :-)
+6. https://code.visualstudio.com/docs/nodejs/reactjs-tutorial Unless 
+7. https://medium.com/@auchenberg/live-edit-and-debug-your-react-apps-directly-from-vs-code-without-leaving-the-editor-3da489ed905f
 
 
 Good Tips:
