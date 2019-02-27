@@ -10,11 +10,11 @@ class List extends React.Component {
       <div id="list">
         <h2>Local Grocers</h2>
         <p>{this.props.textString}</p>
-        <label htmlFor="namedInput">Filter By Name:</label>
-        <input id="namedInput" type="text" name="name" value={this.props.textString} onChange={e => this.props.changeMarker(e.target.value)} />
+        <label tabIndex="0" htmlFor="namedInput">Filter By Name:</label>
+        <input tabIndex="2" id="namedInput" type="text" name="name" value={this.props.textString} onChange={e => this.props.changeMarker(e.target.value)} />
         <ol>
           {venues.map(ven => (       
-            <li key={ven.venue.id}>
+            <li key={ven.venue.id} tabIndex="2">
               <div>
       
                 <p>Name: 

@@ -10,7 +10,7 @@ const Header = props => {
 
   return (
     <header id="header">
-      <h1 id="title">{title}</h1>
+      <h1 aria-label="home" tabIndex="1" id="title">{title}</h1>
     </header>
   );
 };
