@@ -8,8 +8,8 @@ class App extends Component {
   initMap() {
     // The map, centered at SkyFarm
     let map = new window.google.maps.Map(document.getElementById("map"), {
-      center: {lat: 19.547621, lng: -155.0136},
-      zoom: 10
+      center: {lat: 19.699661135673523, lng: -155.064081},
+      zoom: 12
     });
     window.googleMapObject = map;
   }

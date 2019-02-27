@@ -14,7 +14,7 @@ class List extends React.Component {
           {venues.map(ven => (       
             <li key={ven.venue.id}>
               <div>
-
+                {/* Grab address and name info from 4Square API */}
                 <p>Name: <a href="#">{ven.venue.name}</a></p>
                 <p>Address: {ven.venue.location.address}</p>
               </div>
