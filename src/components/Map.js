@@ -35,13 +35,19 @@ class Map extends React.Component {
     }
   };
 
-  constructInfo(venue) {
+  filterMarkersOnMap = () => {
+    for (let i = 0; i < this.markers.length; i++) {
+      this.markers[i].setMap(null);
+    }
+  }
 
-    // for future use instead of infowindow.setContent()
-  
+  constructInfo(venue) {
+    // for future use instead of infowindow.setContent(), here or parent?
   }
   
   render() {
+    {/*  clear and add markers */}
+    this.filterMarkersOnMap();
     this.addMarkers(this.props.venues);
     return <div id="map" />;
   }
