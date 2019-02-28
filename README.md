@@ -4,6 +4,8 @@ This app displays a map with points of interest displayed as both markers and on
 
 The list is filterable and the markers display data about a specific location; powered by the super Foursquare and Google Maps APIs.
 
+Live Version: https://hellodtds.github.io/n8brhoodMap/
+
 ---
 ## Tasks:
 - [x] creates react app
