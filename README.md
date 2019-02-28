@@ -73,6 +73,8 @@ See the section about [running tests](https://facebook.github.io/create-react-ap
 
 ---
 
+** To deploy and publish at https://hellodtds.github.io/n8brhoodMap/, running `yarn run deploy` worked best. For more info, see http://bit.ly/CRA-deploy.
+
 ## Dependencies
 This project was bootstrapped with Create React App. You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
