@@ -1,8 +1,9 @@
 # React Project: Points of Interest on Local Map
 
-This app displays a map with points of interest displayed as both markers and on a list; utilizing data local to the Big Island. The home of amazing poke and the super great bits.coop/#about!!
+This app displays a map with points of interest displayed as both markers and on a list; utilizing data local to the Big Island. The home of amazing poke and the super great bits.coop/#about <3
 
 The list is filterable and the markers display data about a specific location; powered by the super Foursquare and Google Maps APIs.
+
 ---
 ## Tasks:
 - [x] creates react app
